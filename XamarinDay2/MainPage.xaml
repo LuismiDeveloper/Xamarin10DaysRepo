@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinDay2.MainPage">
+
+    <StackLayout Margin="16,20">
+        <Entry x:Name="EntryTitulo"
+            Placeholder="Titulo de la experiencia"
+            TextChanged="EntryTitulo_textChanged"/>
+        
+        <Editor x:Name="contentEditor"
+            VerticalOptions="FillAndExpand"
+            Placeholder="Escribe tu experiencia..."
+            TextChanged="contentEditor_TextChanged"/>
+        
+        <Button x:Name="btnGuardar" Text="Guardar" 
+            IsEnabled="false" Style="{StaticResource mainButtonStyle}"
+            Clicked="btnGuardar_Cliecked"/>
+        
+        <Button x:Name="btnCancelar" Text="Cancelar" Style="{StaticResource cancelButtonStyle}"/>
+    </StackLayout>
+
+</ContentPage>
+    
